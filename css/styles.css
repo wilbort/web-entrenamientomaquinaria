@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: .3s all;
+    transition: .2s all;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 .hero {
     width: 100%;
-    background-image: linear-gradient(to right, rgba(18, 38, 61, 0.8), rgba(18, 38, 61, 0.3)), url(../assets/images/hero1.png);
+    background-image: linear-gradient(to right, rgba(18, 38, 61, 0.8), rgba(18, 38, 61, 0.3)), url(../assets/images/et-cat-pc.jpg);
     background-repeat: no-repeat;
     background-position: 30% 50%;
     background-size: cover;
@@ -37,8 +37,8 @@ body {
     text-transform: uppercase;
     font-family: 'Russo One', sans-serif;
     font-weight: 400;
-    color: #FFCB00;
     font-size: 18px;
+    color: #FFCB00;
     margin-bottom: 4px;
 }
 .hero .hero-content h1.title {
@@ -50,7 +50,7 @@ body {
 }
 .hero .hero-content p.text {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 .hero .hero-content .text span {
     font-weight: 700;
@@ -59,18 +59,37 @@ body {
     color: #FFCB00;
     margin-right: 10px;
 }
-.hero .hero-content p.enlace {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 5px 10px;
-    background-color: #FFCB00;
-    border-radius: 4px;
-    font-size: 18px;
+.hero .hero-content .botones {
+    margin-top: 40px;
+    height: 90px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
 }
-.hero .hero-content p.enlace a {
+.hero .hero-content .botones a {
+    background-color: #FFCB00;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
     color: #121F3D;
+}
+.hero .hero-content .botones a.download {
+    background-color: #1098F7;
+    color: white;
+}
+.hero .hero-content a.enlace:hover, .hero .hero-content .botones a.download:hover {
+    background-color: #121F3D;
+    color: white;
+}
+.hero .hero-content a.enlace:active, .hero .hero-content .botones a.download:active {
+    background-color: #121F3D;
+    color: white;
+    transform: scale(0.95);
 }
 @media screen and (min-width: 360px) {
     .hero nav {
@@ -84,31 +103,45 @@ body {
     .hero {
         padding: 50px 40px;
     }
+    .hero nav {
+        margin-bottom: 80px;
+    }
     .hero nav img {
         width: 300px;  
     }
+    
 }
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 500px) {
     .hero {
-        padding: 50px 40px;
+        padding: 50px 10px 50px 40px;
+    }
+    .hero .hero-content .botones {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
     }
 }
 @media screen and (min-width: 734px) {
     .hero {
         padding: 50px;
-        background-position: 10% 50%;
-        background-image: linear-gradient(to right, rgba(18, 38, 61, 0.9), rgba(18, 38, 61, 0.2)), url(../assets/images/hero1.png);
+        background-image: linear-gradient(to right, rgba(18, 38, 61, 0.9), rgba(18, 38, 61, 0.2)), url(../assets/images/et-cat-pc.jpg);
     }
     .hero nav {
         height: 80px;
     }
-    .curso {
+    .hero .hero-content p.curso {
         font-size: 24px;
         margin-bottom: 4px;
     }
-    .title {
-        font-size: 50px;
-        margin-bottom: 50px;
+    .hero .hero-content h1.title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+    .hero .hero-content p.text {
+        font-size: 22px;
+    }
+    .hero .hero-content .botones {
+        gap: 40px;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -118,5 +151,22 @@ body {
     }
     .hero nav {
         height: 80px;
+    }
+    .hero .hero-content p.curso {
+        margin-bottom: 0px;
+    }
+    .hero .hero-content p.text {
+        font-size: 24px;
+    }
+}
+@media screen and (min-height: 768px) {
+    .hero {
+        border: 8px solid #121F3D;
+    }
+    .hero nav {
+        margin-bottom: 110px;
+    }
+    .hero .hero-content h1.title {
+        margin-bottom: 50px;
     }
 }
