@@ -160,9 +160,6 @@ body {
     }
 }
 @media screen and (min-height: 768px) {
-    .hero {
-        border: 8px solid #121F3D;
-    }
     .hero nav {
         margin-bottom: 110px;
     }
